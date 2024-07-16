@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+header .players{
+    display: flex;
+}
+
+header #player1{
+    margin-right: auto;
+}
+
+header button {
+    height: 2rem;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: cadetblue;
+    color: white;
+    border: none;
+}
+
+.main-content {
+    margin-block: 2rem;
+    padding: 2rem;
+}
+
+.main {
+    transform: translateY(-4rem);
+    background-color: white;
+    display: grid;
+    margin: auto;
+    width: 16rem;
+    height: 16rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
+}
+
+.cell {
+    background-color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-width: 3rem;
+    min-height: 3rem;
+    border: 1px solid black;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: none; /* Elimina el borde izquierdo en las celdas de la primera columna */
+}
+
+.cell:nth-child(3n) {
+    border-right: none; /* Elimina el borde derecho en las celdas de la última columna */
+}
+
+.cell:nth-child(-n + 3) {
+    border-top: none; /* Elimina el borde superior en las celdas de la primera fila */
+}
+
+.cell:nth-last-child(-n + 3) {
+    border-bottom: none; /* Elimina el borde inferior en las celdas de la última fila */
+}
+
+.result {   
+    text-align: center;
+    font-size: large;
+    
+}
+
+footer{
+    background-color: cadetblue;
+}
+
+footer p {
+    bottom: 0;
+    text-align: center;
+}
